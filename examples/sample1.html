@@ -1,0 +1,39 @@
+<html>
+<head>
+	<script language='Javascript' src="../javascripts/json_formatter.js"></script>
+</head>
+<body>
+
+<div id="json_container"></div>	
+
+<script>
+var json = {
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+            "number": 19865,
+            "link": "http://www.google.com",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+};
+
+new JSONFormatter(json, "json_container", {});
+</script>
+
+</body>
+</html>
